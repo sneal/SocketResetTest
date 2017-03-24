@@ -1,5 +1,5 @@
 # SocketResetTest
-App to test socket resets from .NET 4.x
+App to test socket resets from .NET 4.x. This application will do an HTTP GET every 1 second against `https://www.google.com` for 5 minutes by default.
 
 ## Deploying to CF
 
