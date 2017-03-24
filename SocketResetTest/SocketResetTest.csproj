@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ObjectPrinter, Version=2.0.35.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectPrinter.2.0.35\lib\Net40\ObjectPrinter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,10 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)$(TargetFileName)</PostBuildEvent>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)$(TargetFileName)
+copy $(TargetDir)ObjectPrinter.dll $(SolutionDir)ObjectPrinter.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

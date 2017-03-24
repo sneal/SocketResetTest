@@ -5,5 +5,7 @@ applications:
   stack: windows2012R2
   buildpack: binary_buildpack
   health-check-type: none
+  command: SocketResetTest.exe
   env:
     RUN_TIME_IN_SECONDS: 360
+    URL_TO_GET: "https://www.google.com"
